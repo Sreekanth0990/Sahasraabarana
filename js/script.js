@@ -11,7 +11,7 @@ function hideSidebar() {
 //======================================================  Slide Show   ===========================================
 const swiper = new Swiper(".swiper", {
   autoplay: {
-    delay: 3000,
+    delay: 4000,
     disableOnInteraction: false,
   },
   loop: true,
@@ -27,34 +27,5 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-//========================================================  Slider 2   =============================================
-new Glider(document.querySelector(".glider"), {
-  slidesToScroll: 1,
-  slidesToShow: 4,
-  draggable: true,
-  dots: ".dots",
-  arrows: {
-    prev: ".glider-prev",
-    next: ".glider-next",
-  },
 
-  responsive: [
-    {
-      // screens greater than >= 775px
-      breakpoint: 1200,
-      settings: {
-        // Set to `auto` and provide item width to adjust to viewport
-        slidesToShow: 4,
-        slidesToScroll: 2,
-      },
-    },
-    {
-      // screens greater than >= 1024px
-      breakpoint: 0,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-});
+

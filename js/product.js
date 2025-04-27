@@ -23,7 +23,7 @@ var firebaseConfig = {
   
       snapshot.forEach((childSnapshot) => {
         const product = childSnapshot.val();
-  
+
         const productHTML = `
         <div class="product-box">
           <span class="p-discount">${product.discount}</span>
@@ -47,7 +47,7 @@ var firebaseConfig = {
           </div>
         </div>
       `;
-      
+
         productList.innerHTML += productHTML;
       });
   
@@ -57,15 +57,36 @@ var firebaseConfig = {
   
   // --- Initialize Glider Slider ---
   function initializeGlider() {
-    new Glider(document.querySelector('.glider'), {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      draggable: true,
-      arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
-      }
-    });
+    new Glider(document.querySelector(".glider"), {
+  slidesToScroll: 1,
+  slidesToShow: 4,
+  draggable: true,
+  dots: ".dots",
+  arrows: {
+    prev: ".glider-prev",
+    next: ".glider-next",
+  },
+
+  responsive: [
+    {
+      // screens greater than >= 775px
+      breakpoint: 1200,
+      settings: {
+        // Set to `auto` and provide item width to adjust to viewport
+        slidesToShow: 4,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      // screens greater than >= 1024px
+      breakpoint: 0,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
   }
   
   // --- Fetch products on page load ---
