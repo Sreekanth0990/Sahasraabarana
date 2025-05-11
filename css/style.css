@@ -102,20 +102,65 @@ nav li:first-child {
 .title_one {
   display: flex;
   justify-content: center;
+  margin: 2rem 1rem;
 }
+
 .headline_one {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  column-gap: 1.6rem;
+  column-gap: 1rem;
   color: #e4b613;
+  font-size: 2rem;
+  text-align: center;
 }
+
 .headline_one::before,
 .headline_one::after {
   content: "";
   height: 2px;
   background-color: #e4b613;
   display: block;
+  width: 100%;
+}
+
+/* Video container */
+.video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.back-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive typography and layout */
+@media (max-width: 768px) {
+  .headline_one {
+    font-size: 1.5rem;
+    column-gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline_one {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .headline_one::before,
+  .headline_one::after {
+    width: 60%;
+  }
+
+  .title_one {
+    margin: 1.5rem 0.5rem;
+  }
 }
 /*======================================================= Slider-1 =======================================================*/
 .p-slider {
@@ -221,6 +266,7 @@ a {
 .price-buy .p-buy-btn:hover {
   text-decoration: underline;
 }
+
 .p-discount {
   position: absolute;
   left: 20px;
@@ -529,6 +575,7 @@ form button {
   .price-buy .p-price {
     font-size: 1.1rem;
   }
+
   .p-img-container:hover .p-img-back {
     display: none;
   }
@@ -602,4 +649,44 @@ form button {
   footer .container {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content a {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.modal-content img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
 }

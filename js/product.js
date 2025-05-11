@@ -26,7 +26,7 @@ var firebaseConfig = {
 
         const productHTML = `
         <div class="product-box">
-          <span class="p-discount">${product.discount}</span>
+          <span class="p-discount">-${product.discount}%</span>
           <div class="p-img-container">
             <div class="p-img">
               <a href="#">

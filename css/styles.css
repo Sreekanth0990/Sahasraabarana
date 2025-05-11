@@ -1,0 +1,106 @@
+/* Styles for Product Page */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .filter-buttons button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-box {
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+  }
+  .product-box:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .p-discount {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #ffffff;
+    color: #e63b3b;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 5px;
+  }
+  
+  .p-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
+  
+  .p-box-text {
+    text-align: center;
+  }
+  
+  .product-category {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .product-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .price-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  
+  .p-priceoriginal {
+    color: #e63b3b;
+    text-decoration: line-through;
+    font-weight: bold;
+  }
+  
+  .p-pricediscounted {
+    color: #0e9e2b;
+    font-weight: bold;
+  }
+  
+  .p-buy-btn {
+    display: inline-block;
+    margin-top: 8px;
+    color: #e63b3b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .p-buy-btn:hover {
+    text-decoration: underline;
+  }
